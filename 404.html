@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>页面不存在 — 海洋牧场 / Page Not Found — Marine Ranch</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep: #1B3A4B; --mid: #2C5F7C; --sea: #4DA8C7; --coral: #E8764A;
+    --frost: #F4EDE4; --warm-white: #FCFAF7;
+    --font-display: 'Playfair Display', Georgia, 'Songti SC', serif;
+    --font-body: 'DM Sans', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-body); background: var(--warm-white); color: var(--deep); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+  .wrap { max-width: 560px; }
+  .code { font-family: var(--font-display); font-size: clamp(4rem, 12vw, 7rem); font-weight: 600; color: var(--sea); line-height: 1; }
+  h1 { font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.8rem); font-weight: 600; color: var(--deep); margin: 1rem 0 .75rem; }
+  p { font-size: .95rem; color: #5a6570; line-height: 1.7; margin-bottom: 2rem; }
+  .btn { display: inline-block; padding: .8rem 1.8rem; background: var(--coral); color: #fff; border: none; border-radius: 3px; font-weight: 600; letter-spacing: .04em; cursor: pointer; font-size: .85rem; text-decoration: none; transition: background .2s; }
+  .btn:hover { background: #cf5f37; }
+  .btn.secondary { background: var(--mid); margin-left: .75rem; }
+  .btn.secondary:hover { background: #24506b; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>页面不存在<br>Page Not Found</h1>
+    <p>您访问的页面可能已被移动或删除。<br>The page you requested may have been moved or removed.</p>
+    <a class="btn" href="index.html">返回首页 · Back to Home</a>
+    <a class="btn secondary" href="contact.html">联系我们 · Contact Us</a>
+  </div>
+</body>
+</html>

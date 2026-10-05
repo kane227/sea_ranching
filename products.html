@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN" data-i18n-doc-title="products.title">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>产品业务 — 海洋牧场</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Open Graph / 社交分享预览 -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="海洋牧场 Marine Ranch">
+  <meta property="og:url" content="https://hymc.store/products.html">
+  <meta property="og:title" content="产品业务 — 海洋牧场">
+  <meta property="og:description" content="大连辽参（冻/干）、濑尿虾、海胆等高附加值海产品，覆盖水产出口、农产品与电子物料。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://hymc.store/favicon.svg">
+  <meta property="og:image:alt" content="海洋牧场 Marine Ranch Logo">
+  <meta name="twitter:card" content="summary">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="nav-logo-link" href="index.html">
+        <svg class="nav-logo-svg" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="transparent" />
+          <path d="M12 24 Q20 18 28 24 Q36 30 44 24" stroke="#4DA8C7" stroke-width="3" fill="none"
+            stroke-linecap="round" />
+          <path d="M12 34 Q20 28 28 34 Q36 40 44 34" stroke="#4DA8C7" stroke-width="3" fill="none"
+            stroke-linecap="round" opacity="0.6" />
+          <path d="M48 44 L48 28 Q48 25 51 25 L54 25 Q58 25 58 30 L58 36 Q58 42 52 42" stroke="#E8764A"
+            stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="nav-logo-text" data-i18n="brand.cn">海洋牧场</span>
+      </a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="products.html" data-i18n="nav.products">产品业务</a></li>
+        <li><a href="pricing.html" data-i18n="nav.pricing">报价</a></li>
+        <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+      </ul>
+      <button class="lang-btn" data-lang-btn aria-label="Language">EN</button>
+      <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html" data-i18n="nav.home">首页</a>
+    <a href="products.html" data-i18n="nav.products">产品业务</a>
+    <a href="pricing.html" data-i18n="nav.pricing">报价</a>
+    <a href="about.html" data-i18n="nav.about">关于我们</a>
+    <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+  </div>
+
+  <section class="page-head">
+    <p class="section-label" data-i18n="products.label">Products & Services</p>
+    <h1 class="page-title" data-i18n="products.head">产品与业务</h1>
+    <p class="section-desc" data-i18n="products.desc">三大业务板块，覆盖水产出口、农产品与电子物料，支持定制化供应方案。</p>
+  </section>
+
+  <!-- 分类快速定位 -->
+  <section>
+    <nav class="cat-nav reveal" data-render="catnav" aria-label="产品分类"></nav>
+  </section>
+
+  <div id="groups"></div>
+
+  <section style="text-align:center;background:var(--frost)">
+    <h2 class="section-title reveal" data-i18n="products.none.title">没找到需要的产品？</h2>
+    <p class="section-desc reveal" style="margin:0 auto 2rem" data-i18n="products.none.desc">告诉我们您的需求，我们提供定制采购与供应方案。</p>
+    <a class="btn reveal" href="pricing.html" data-i18n="products.none.btn">获取报价</a>
+  </section>
+
+  <!-- 产品详情弹窗 -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close" aria-label="关闭">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">海洋牧场 Marine Ranch</div>
+        <p class="footer-desc" data-i18n="footer.tagline">海洋牧场 Marine Ranch，提供水产出口、农产品与电子物料的一体化贸易服务，以全球化供应链与严苛品质标准服务客户。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.products">产品业务</h4>
+        <ul>
+          <li><a href="products.html" data-i18n="nav.products">产品业务</a></li>
+          <li><a href="pricing.html" data-i18n="nav.pricing">报价</a></li>
+          <li><a href="products.html" data-i18n="index.card.more">了解详情</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.nav">导航</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+          <li><a href="pricing.html" data-i18n="nav.pricing">报价</a></li>
+          <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.contact">联系方式</h4>
+        <ul>
+          <li><a href="mailto:support@hymc.store">support@hymc.store</a></li>
+          <li>刘生 +86 13641400316</li>
+          <li><a href="contact.html" data-i18n="footer.contact.detail">查看详情</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="y"></span> <span data-i18n="footer.copyright">海洋牧场 Marine Ranch.</span> <a
+          href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">粤ICP备2026041186号-1</a></span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="回到顶部">↑</button>
+
+  <script src="data.js"></script>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const isEn = () => window.i18n.current() === 'en';
+    const PLACEHOLDER_ICON = { seafood: 'drop', agri: 'leaf', electronic: 'chip' };
+
+    function renderGroups() {
+      const groups = document.getElementById('groups');
+      groups.innerHTML = window.BUSINESS_LINES.map((b) => {
+        const items = window.PRODUCTS.filter((p) => p.category === b.id);
+        return '<section id="' + b.id + '">' +
+          '<p class="section-label reveal visible">' + b.en + '</p>' +
+          '<h2 class="section-title reveal visible">' + (isEn() ? b.en : b.name) + '</h2>' +
+          '<p class="section-desc reveal visible">' + (isEn() ? b.en_desc : b.desc) + '</p>' +
+          '<div class="cards' + (items.length >= 4 ? ' cards-4' : '') + ' reveal visible">' + items.map((p) => {
+            const specs = isEn() ? (p.en_specs || p.specs) : p.specs;
+            const sub = specs && specs[0] ? specs[0].v : '';
+            const media = p.img
+              ? '<img src="' + p.img + '" alt="' + (isEn() ? p.en : p.name) + '" loading="lazy" />'
+              : window.MR.iconC(PLACEHOLDER_ICON[p.category] || 'drop', '#F4EDE4');
+            const imgCls = p.img ? '' : ' placeholder';
+            return '<div class="card product-card" data-product="' + p.id + '">' +
+              '<div class="card-img' + imgCls + ' ' + p.icon + '">' + media + '</div>' +
+              '<div class="card-body"><h4>' + (isEn() ? p.en : p.name) + '</h4>' +
+              '<p>' + sub + '</p>' +
+              '<span class="card-tag">' + p.tag + '</span></div>' +
+              '</div>';
+          }).join('') + '</div></section>';
+      }).join('');
+      bindModal();
+    }
+
+    // 弹窗（重新渲染后需要重新绑定）
+    function bindModal() {
+      const overlay = document.getElementById('modal-overlay');
+      const content = document.getElementById('modal-content');
+      if (!overlay || !content) return;
+      document.querySelectorAll('.product-card').forEach((card) => {
+        card.onclick = null;
+        card.addEventListener('click', () => {
+          const p = window.PRODUCTS.find((x) => x.id === card.dataset.product);
+          if (!p) return;
+          const specs = isEn() ? (p.en_specs || p.specs) : p.specs;
+          const certs = (p.cert && p.cert.length)
+            ? '<div class="modal-cert">' + p.cert.map((c) => '<span>' + c + '</span>').join('') + '</div>'
+            : '';
+          content.innerHTML =
+            '<p class="modal-cat">' + p.tag + '</p>' +
+            '<h3 class="modal-title">' + (isEn() ? p.en : p.name) + '<span>' + (isEn() ? p.name : p.en) + '</span></h3>' +
+            '<p class="modal-desc">' + (isEn() ? p.en_desc : p.desc) + '</p>' +
+            '<div class="modal-specs">' + specs.map((s) => '<div class="spec"><span>' + s.k + '</span><b>' + s.v + '</b></div>').join('') + '</div>' +
+            certs +
+            '<div style="display:flex;gap:.6rem;flex-wrap:wrap">' +
+            '<a class="btn" href="pricing.html">' + window.i18n('common.quote') + '</a>' +
+            '<a class="btn" style="background:var(--mid)" href="mailto:support@hymc.store?subject=询价 - ' + encodeURIComponent(p.name) + '">' + window.i18n('contact.mail') + '</a>' +
+            '</div>';
+          overlay.hidden = false;
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      document.getElementById('modal-close').onclick = closeModal;
+      overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+      function closeModal() { overlay.hidden = true; document.body.style.overflow = ''; }
+    }
+
+    renderGroups();
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.addEventListener('langchange', () => { renderGroups(); });
+  </script>
+</body>
+
+</html>
